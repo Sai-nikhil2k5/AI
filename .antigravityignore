@@ -1,0 +1,52 @@
+# Environments & Dependencies
+venv/
+.venv/
+env/
+node_modules/
+__pycache__/
+*.pyc
+
+# Database Files & Dumps
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# Large Data & Datasets
+*.json
+*.csv
+*.parquet
+*.feather
+*.pkl
+
+# Logs & Cache
+*.log
+.antigravity/
+.cache/
+.pytest_cache/
+dist/
+build/
+
+# Media & Binary Files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.zip
+*.tar.gz
+
+# Local Index & Metadata
+.indices/
+.antigravity/
+.git/
+
+# AI Framework Caches & Virtual Envs
+venv/
+.venv/
+__pycache__/
+
+# Large Data & Log Files
+*.json
+*.sql
+*.log
+*.csv

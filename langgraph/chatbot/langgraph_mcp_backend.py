@@ -1,7 +1,7 @@
 from langgraph.graph import StateGraph, START, END
 from typing import TypedDict, Annotated
 from langchain_core.messages import BaseMessage, HumanMessage
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
@@ -38,7 +38,7 @@ def submit_async_task(coro):
 # -------------------
 # 1. LLM
 # -------------------
-llm = ChatOpenAI()
+llm = ChatGroq(model="openai/gpt-oss-120b")
 
 # -------------------
 # 2. Tools

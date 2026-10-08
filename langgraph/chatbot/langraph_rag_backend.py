@@ -12,7 +12,8 @@ from langchain_community.tools import DuckDuckGoSearchRun
 from langchain_community.vectorstores import FAISS
 from langchain_core.messages import BaseMessage, SystemMessage
 from langchain_core.tools import tool
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_groq import ChatGroq
+from langchain_openai import OpenAIEmbeddings
 from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.graph import START, StateGraph
 from langgraph.graph.message import add_messages
@@ -24,7 +25,7 @@ load_dotenv()
 # -------------------
 # 1. LLM + embeddings
 # -------------------
-llm = ChatOpenAI(model="gpt-4o-mini")
+llm = ChatGroq(model="openai/gpt-oss-120b")
 embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 
 # -------------------
